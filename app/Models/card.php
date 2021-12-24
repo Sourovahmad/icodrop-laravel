@@ -9,7 +9,6 @@ class card extends Model
 {
     use HasFactory;
 
-
     public function screnshots()
     {
         return $this->hasMany(cardHasScrenshoot::class, 'card_id', 'id');

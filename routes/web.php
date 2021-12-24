@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [indexController::class, 'index'])->name('index');
-
+Route::get('card-details/{card_id}', [CardController::class, 'showDetails'])->name('singleCard');
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('admin', function() {

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\card;
 use App\Http\Requests\StorecardRequest;
 use App\Http\Requests\UpdatecardRequest;
+use App\Models\cardHasScrenshoot;
+use Illuminate\Http\Request;
 
 class CardController extends Controller
 {
@@ -15,7 +17,7 @@ class CardController extends Controller
      */
     public function index()
     {
-        return view('admin.create');
+        //
     }
 
     /**
@@ -34,9 +36,124 @@ class CardController extends Controller
      * @param  \App\Http\Requests\StorecardRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StorecardRequest $request)
+    public function store(Request $request)
     {
-        return $request;
+
+       $request->validate([
+
+           'name' => 'required',
+           'service_type' => 'required',
+           'card_type' => 'required',
+           'role_of_token' => 'required',
+           'sale_start' => 'required|date',
+           'sale_end' => 'required|date|after:sale_start',
+           'previous_price' => 'required',
+           'ico_token_price' => 'required',
+           'banner_image' => 'required',
+           'logo' => 'required',
+           'token_type' => 'required'
+       ]);
+
+
+       $card =  new card;
+       $card->name = $request->name;
+       $card->service_type = $request->service_type;
+       $card->card_type = $request->card_type;
+       $card->description = $request->discription;
+
+       if(!is_null($request->importand_notice)){
+            $card->importand_notice = $request->importand_notice;
+       }
+
+
+       $logoName = time() . '_logo_' . $request->logo->getClientOriginalName();
+       $request->logo->move(public_path('images'), $logoName);
+
+       $newNameLogo = route('index').'/images' .'/' . $logoName;
+       $card->logo = $newNameLogo;  
+
+
+       $bannerName = time(). '_banner_' . $request->banner_image->getClientOriginalName();
+       $request->banner_image->move(public_path('images'), $bannerName);
+
+       $newNameBanner = route('index').'/images' .'/' . $bannerName;
+       $card->banner_image = $newNameBanner; 
+
+       $card->sale_start = date('Y-m-d H:i:s', strtotime($request->sale_start));
+       $card->sale_end = date('Y-m-d H:i:s', strtotime($request->sale_end));
+
+
+       $current_price = $request->price;
+       $prev_price = $request->previous_price;
+
+       $card->price = $current_price;
+       $card->previous_price = $prev_price;
+       $card->ico_token_price = $request->ico_token_price;
+
+       $increse = $current_price - $prev_price;
+       $parcent = $increse / $prev_price * 100;
+       $card->diffrent_parcent = $parcent;
+
+       $card->role_of_token = $request->role_of_token;
+       $card->token_type = $request->token_type;
+
+
+
+       // null requestes
+
+       if(!is_null($request->website_link)){
+            $card->website_link = $request->website_link;
+       }
+
+       if(!is_null($request->whitepaper)){
+        $card->whitepaper = $request->whitepaper;
+       }
+        
+        if(!is_null($request->usd_fund_goal)){
+         $card->usd_fund_goal = $request->usd_fund_goal;
+        }
+
+
+        if(!is_null($request->total_tokens)){
+            $card->total_tokens = $request->total_tokens;
+           }
+
+           $card->save();
+        
+
+
+        // saving screnshots 
+
+        $allScrenshots = $request->screenshots;
+        $allScrenshotNames = $request->screenshotName;
+
+        if(!is_null($allScrenshots)){
+        if(!$allScrenshots->isEmpty()){
+            foreach ($allScrenshots as $key => $screnshot) {
+
+                $cardHasScrenshot = new cardHasScrenshoot;
+                $cardHasScrenshot->card_id = $card->id;
+                $cardHasScrenshot->name = $allScrenshotNames[$key];
+
+
+                $screnshotName = time() . '_scrnshot_' . $screnshot->getClientOriginalName();
+                $screnshot->move(public_path('images/screenshots'), $screnshotName);
+         
+                $newNameScrenshto = route('index').'/images/screenshots' .'/' . $screnshotName;
+                $cardHasScrenshot->image = $newNameScrenshto;  
+
+
+                $cardHasScrenshot->save();
+
+            }
+        }
+            
+    }
+
+
+        return back()->withSuccess("Card Created Successfully");
+
+
     }
 
     /**
@@ -47,7 +164,7 @@ class CardController extends Controller
      */
     public function show(card $card)
     {
-        //
+        return $card;
     }
 
     /**
@@ -82,5 +199,11 @@ class CardController extends Controller
     public function destroy(card $card)
     {
         //
+    }
+
+    public function showDetails($card_id)
+    {
+       $card = card::with('screnshots')->find($card_id);
+       return view('frontend.singleCard', compact('card'));
     }
 }

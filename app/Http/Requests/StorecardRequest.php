@@ -25,7 +25,6 @@ class StorecardRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            ''
         ];
     }
 }
