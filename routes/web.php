@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CardController;
+use App\Http\Controllers\indexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,13 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [indexController::class, 'index'])->name('index');
+
+
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::get('admin', function() {
+        return view('admin.index');
+    })->name('admin');
+
+    route::resource('cards',CardController::class);
 });
 
 
-
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
