@@ -35,6 +35,10 @@ Route::middleware(['auth:sanctum'])->group(function () {
         return view('admin.index');
     })->name('admin');
 
+    Route::get('dashboard',function(){
+        return view('dashboard.dashboard');
+    })->name('dashboard');
+
     route::resource('cards',CardController::class);
     route::get('archived', [CardController::class, 'archived'])->name('archived');
 
