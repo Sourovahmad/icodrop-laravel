@@ -39,6 +39,7 @@ class CardController extends Controller
     public function store(Request $request)
     {
 
+
        $request->validate([
 
            'name' => 'required',
@@ -128,7 +129,6 @@ class CardController extends Controller
         $allScrenshotNames = $request->screenshotName;
 
         if(!is_null($allScrenshots)){
-        if(!$allScrenshots->isEmpty()){
             foreach ($allScrenshots as $key => $screnshot) {
 
                 $cardHasScrenshot = new cardHasScrenshoot;
@@ -144,8 +144,6 @@ class CardController extends Controller
 
 
                 $cardHasScrenshot->save();
-
-            }
         }
             
     }
@@ -205,5 +203,10 @@ class CardController extends Controller
     {
        $card = card::with('screnshots')->find($card_id);
        return view('frontend.singleCard', compact('card'));
+    }
+
+    public function archived()
+    {
+        return card::where('sale_end', '<', now()->format('Y-m-d H:i:s'))->get();
     }
 }

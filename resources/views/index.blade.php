@@ -61,7 +61,7 @@
             @if(!$active->isEmpty())
             <div class="page-redirect-btn">
                 <button>
-                    <a href="active ico page link">VIEW ALL ACTIVE ICO</a>
+                    <a href="{{ route('active_ico') }}">VIEW ALL ACTIVE ICO</a>
                 </button>
             </div>
             @endif
@@ -128,7 +128,7 @@
             @if(!$UpComing->isEmpty())
             <div class="page-redirect-btn">
                 <button>
-                    <a href="active ico page link">VIEW ALL Upcoming ICO</a>
+                    <a href="{{ route('UpComing_ico') }}">VIEW ALL Upcoming ICO</a>
                 </button>
             </div>
             @endif
@@ -195,7 +195,7 @@
         @if(!$Ended->isEmpty())
             <div class="page-redirect-btn">
                 <button>
-                    <a href="active ico page link">VIEW ALL Ended ICO</a>
+                    <a href="{{ route('Ended_ico') }}">VIEW ALL Ended ICO</a>
                 </button>
             </div>
 
