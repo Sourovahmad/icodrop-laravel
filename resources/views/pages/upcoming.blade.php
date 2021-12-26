@@ -43,297 +43,58 @@
             </div>
         </div>
         <div class="ico-details">
+            @foreach ( $UpComing_ico as $singleUpcoming )
+
+
             <a class="ico">
                 <div class="row align-items-center">
                     <div class="col-lg-4 d-flex align-items-center">
                         <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
+                            <img src="{{ $singleUpcoming->logo }}" alt="">
+
                         </div>
                         <div class="info">
                             <div class="name">
-                                <h6>pSTAKE</h6>
+                                <h6>{{ $singleUpcoming->name }}</h6>
+
                             </div>
                             <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
+                                <span>{{ $singleUpcoming->service_type }}</span>
+
+
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-2 interest">
                         <span>Not Rated</span>
+
+
+
                     </div>
                     <div class="col-lg-2 category">
-                        <span>Protocol</span>
+                        <span>{{ $singleUpcoming->card_type }}</span>
+
+
+
                     </div>
                     <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
+                        <span>${{ $singleUpcoming->price }}</span>
+
                     </div>
                     <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
+                        <span>{{ $singleUpcoming->sale_end }}</span>
+
+
                     </div>
                 </div>
             </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
-            <a class="ico">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 d-flex align-items-center">
-                        <div class="img">
-                            <img src="../images/pSTAKE_logo-150x150.jpeg" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="name">
-                                <h6>pSTAKE</h6>
-                            </div>
-                            <div class="desc">
-                                <span>Lorem ipsum dolor sit amet...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 interest">
-                        <span>Not Rated</span>
-                    </div>
-                    <div class="col-lg-2 category">
-                        <span>Protocol</span>
-                    </div>
-                    <div class="col-lg-2 received">
-                        <span>$18, 000, 000</span>
-                    </div>
-                    <div class="col-lg-2 end-date">
-                        <span>22 jan</span>
-                    </div>
-                </div>
-            </a>
+
+            @endforeach
+
+
+
         </div>
+
     </div>
 </section>
 

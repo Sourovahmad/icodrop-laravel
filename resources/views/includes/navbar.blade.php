@@ -14,9 +14,9 @@
             <div class="navbar-nav ms-auto">
                 <a class="nav-link" href="{{ asset('/') }}">HOME</a>
                 <a class="nav-link" href="{{ asset('/about') }}">ABOUT</a>
-                <a class="nav-link" aria-current="page" href="{{ asset ('/active') }}">ACTIVE ICO</a>
-                <a class="nav-link" href="{{ asset ('/upcoming') }}">UPCOMING ICO</a>
-                <a class="nav-link" href="{{ asset('/ended') }}">ENDED ICO</a>
+                <a class="nav-link" aria-current="page" href="{{ asset ('/active-ico-list') }}">ACTIVE ICO</a>
+                <a class="nav-link" href="{{ asset ('/upcoming-ico-list') }}">UPCOMING ICO</a>
+                <a class="nav-link" href="{{ asset('/ended-ico-list') }}">ENDED ICO</a>
                 <a class="nav-link" href="{{ asset('/whitelist') }}">WHITELIST</a>
             </div>
         </div>

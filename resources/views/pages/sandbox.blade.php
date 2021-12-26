@@ -43,23 +43,24 @@
                 </div>
             </div>
             <div class="ico-details">
-                @foreach ( $Ended_ico as $singleEnded )
+                @foreach ( $SandBox_ico as $singleSandBox )
+
 
 
                 <a class="ico">
                     <div class="row align-items-center">
                         <div class="col-lg-4 d-flex align-items-center">
                             <div class="img">
-                                <img src="{{ $singleEnded->logo }}" alt="">
+                                <img src="{{ $singleSandBox->logo }}" alt="">
 
                             </div>
                             <div class="info">
                                 <div class="name">
-                                    <h6>{{ $singleEnded->name }}</h6>
+                                    <h6>{{ $singleSandBox->name }}</h6>
 
                                 </div>
                                 <div class="desc">
-                                    <span>{{ $singleEnded->service_type }}</span>
+                                    <span>{{ $singleSandBox->service_type }}</span>
 
 
                                 </div>
@@ -72,17 +73,17 @@
 
                         </div>
                         <div class="col-lg-2 category">
-                            <span>{{ $singleEnded->card_type }}</span>
+                            <span>{{ $singleSandBox->card_type }}</span>
 
 
 
                         </div>
                         <div class="col-lg-2 received">
-                            <span>${{ $singleEnded->price }}</span>
+                            <span>${{ $singleSandBox->price }}</span>
 
                         </div>
                         <div class="col-lg-2 end-date">
-                            <span>{{ $singleEnded->sale_end }}</span>
+                            <span>{{ $singleSandBox->sale_end }}</span>
 
 
                         </div>
