@@ -1,3 +1,5 @@
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" href="#">
@@ -10,12 +12,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="">HOME</a>
-                <a class="nav-link" href="pages/about.html">ABOUT</a>
-                <a class="nav-link" aria-current="page" href="pages/active.html">ACTIVE ICO</a>
-                <a class="nav-link" href="pages/upcoming.html">UPCOMING ICO</a>
-                <a class="nav-link" href="pages/ended.html">ENDED ICO</a>
-                <a class="nav-link" href="pages/whitelist.html">WHITELIST</a>
+                <a class="nav-link" href="{{ asset('/') }}">HOME</a>
+                <a class="nav-link" href="{{ asset('/about') }}">ABOUT</a>
+                <a class="nav-link" aria-current="page" href="{{ asset ('/active') }}">ACTIVE ICO</a>
+                <a class="nav-link" href="{{ asset ('/upcoming') }}">UPCOMING ICO</a>
+                <a class="nav-link" href="{{ asset('/ended') }}">ENDED ICO</a>
+                <a class="nav-link" href="{{ asset('/whitelist') }}">WHITELIST</a>
             </div>
         </div>
     </div>
@@ -27,7 +29,7 @@
             <span>ETH $4002  <span class="redNumber">-0.6%</span></span>
         </div>
         <div class="smallDesc">
-            <p><span class="redNumber">*</span> DISCLAIMER: All information including our "Interest Level" rating, is provided merely for informational purposes. ICO Drops does not provide investment advice </p> 
+            <p><span class="redNumber">*</span> DISCLAIMER: All information including our "Interest Level" rating, is provided merely for informational purposes. ICO Drops does not provide investment advice </p>
         </div>
     </div>
 </header>

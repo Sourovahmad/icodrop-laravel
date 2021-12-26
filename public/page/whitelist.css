@@ -1,0 +1,180 @@
+body {
+  background: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1EBF74;
+  border-radius: 10px;
+}
+
+nav {
+  background: #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+  max-width: 100px;
+}
+
+nav .logo img {
+  width: 100%;
+}
+
+nav .navbar-toggler {
+  background: #1EBF74;
+}
+
+nav .navbar-toggler img {
+  width: 25px;
+}
+
+nav .navbar-collapse .navbar-nav {
+  text-align: center;
+}
+
+nav .navbar-collapse .navbar-nav .nav-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1EBF74;
+}
+
+header .situation {
+  margin-top: 10px;
+}
+
+header .situation span {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(56, 56, 56, 0.5);
+}
+
+header .situation .greenNumber {
+  color: #1EBF74;
+  margin-right: 20px;
+}
+
+header .situation .redNumber {
+  color: #cc327a;
+}
+
+header .smallDesc {
+  margin-top: 6px;
+}
+
+header .smallDesc p {
+  font-size: 12px;
+  color: rgba(56, 56, 56, 0.5);
+}
+
+header .smallDesc p span {
+  color: #cc327a;
+}
+
+footer .container {
+  padding-top: 20px;
+  border-top: 1px solid #dbdbdb;
+}
+
+footer .container .logo {
+  width: 100px;
+}
+
+footer .container .logo img {
+  width: 100%;
+}
+
+footer .container .descs {
+  margin-top: 15px;
+}
+
+footer .container .descs p {
+  opacity: 0.8;
+  color: #383838;
+  font-size: 12px;
+}
+
+footer .container .page-links li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+footer .container .page-links li a {
+  text-decoration: none;
+  color: #383838;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+section.whitelist-page {
+  padding: 50PX 0;
+}
+
+section.whitelist-page .title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section.whitelist-page .title h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+section.whitelist-page .small-line {
+  text-align: center;
+}
+
+section.whitelist-page .small-line P {
+  font-style: 16px;
+}
+
+section.whitelist-page .whitelist-boxes {
+  width: 80%;
+}
+
+@media screen and (max-width: 920px) {
+  section.whitelist-page .whitelist-boxes {
+    width: 100%;
+  }
+}
+
+section.whitelist-page .whitelist-boxes .box {
+  padding: 15px 0;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+section.whitelist-page .whitelist-boxes .box .img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 8px;
+  overflow: hidden;
+}
+
+section.whitelist-page .whitelist-boxes .box .img img {
+  width: 100%;
+}
+
+section.whitelist-page .whitelist-boxes .box .name h4 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+section.whitelist-page .whitelist-boxes .box span {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section.whitelist-page .whitelist-boxes .box a {
+  font-weight: bolder;
+  color: #1EBF74;
+  font-size: 18px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=whitelist.css.map */

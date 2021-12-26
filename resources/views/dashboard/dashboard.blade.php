@@ -538,7 +538,7 @@
             <div class="row">
 
                 <!-- Left side columns -->
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="row">
 
                         <!-- Sales Card -->
@@ -649,7 +649,7 @@
                         </div><!-- End Customers Card -->
 
                         <!-- Reports -->
-                        <div class="col-12">
+                        {{-- <div class="col-12">
                             <div class="card">
 
                                 <div class="filter">
@@ -668,7 +668,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Reports <span>/Today</span></h5>
 
-                                    <!-- Line Chart -->
+
                                     <div id="reportsChart"></div>
 
                                     <script>
@@ -724,12 +724,15 @@
                                         });
 
                                     </script>
-                                    <!-- End Line Chart -->
+
 
                                 </div>
 
                             </div>
-                        </div><!-- End Reports -->
+                        </div> --}}
+
+
+                        <!-- End Reports -->
 
                         <!-- Recent Sales -->
                         <div class="col-12">
@@ -883,7 +886,7 @@
                 </div><!-- End Left side columns -->
 
                 <!-- Right side columns -->
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
 
                     <!-- Recent Activity -->
                     <div class="card">
@@ -1166,7 +1169,7 @@
                         </div>
                     </div><!-- End News & Updates -->
 
-                </div><!-- End Right side columns -->
+                </div><!-- End Right side columns --> --}}
 
             </div>
         </section>
@@ -1176,14 +1179,15 @@
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>qqqqq</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
             <!-- All the links in the footer should remain intact. -->
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://www.sarlex.org/">Sarlex Technology</a>
+
         </div>
     </footer><!-- End Footer -->
 
