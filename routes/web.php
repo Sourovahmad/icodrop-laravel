@@ -40,18 +40,15 @@ Route::get('sandbox-ico-list', [indexController::class, 'SandBox_ico'])->name('S
 //protected routes
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('admin', function() {
-        return view('admin.index');
+        return view('dashboard.dashboard');
     })->name('admin');
 
-    Route::get('dashboard',function(){
-        return view('dashboard.dashboard');
-    })->name('dashboard');
+    // Route::get('dashboard',function(){
+    //     return view('dashboard.dashboard');
+    // })->name('dashboard');
 
     route::resource('cards',CardController::class);
     route::get('archived', [CardController::class, 'archived'])->name('archived');
-
-
-
 });
 
 
