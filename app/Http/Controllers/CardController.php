@@ -214,7 +214,8 @@ class CardController extends Controller
 
     public function archived()
     {
-        return card::where('sale_end', '<', now()->format('Y-m-d H:i:s'))->get();
+        $cards =  card::where('sale_end', '<', now()->format('Y-m-d H:i:s'))->get();
+        return view('admin.archived', compact('cards'));
     }
 
 

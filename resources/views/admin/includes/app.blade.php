@@ -39,9 +39,8 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="{{ route('admin') }}l" class="logo d-flex align-items-center">
                 <img src="{{ asset('images/logo/LogoDrops.png') }}" alt="">
-                {{-- <span class="d-none d-lg-block">IceDrop</span> --}}
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -50,7 +49,6 @@
             <ul class="d-flex align-items-center">
 
 
-                <!-- End Messages Nav -->
 
                 <li class="nav-item dropdown pe-3">
 
