@@ -8,13 +8,17 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>create page</title> 
+    <title>create page</title>
   </head>
-  <body>
+  <body class="container mt-3">
+      <a href="{{ asset('/admin') }}" type="button" class="btn btn-primary btn-lg">Back to Dashboard</a>
 
 
 
-    
+
+
+
+
     @if ($message = Session::get('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>{{ $message }}</strong>
@@ -32,8 +36,8 @@
 
 
 
-    <div class="container">
-        
+    <div class="container my-3 p-3 bg-light">
+
         <form method="POST" action="{{ route('cards.store') }}" enctype="multipart/form-data">
             @csrf
 
@@ -75,7 +79,7 @@
             <div class="row">
 
 
-                
+
                 <div class="col-sm-12 col-md-6">
                     <div class="mb-3">
                         <label for="discription" class="form-label">Discription</label>
@@ -142,7 +146,7 @@
 
 
 
-            
+
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <div class="mb-3">
@@ -169,9 +173,9 @@
 
             </div>
 
-            
 
-            
+
+
             <div class="row">
                 <div class="col-sm-12 col-md-4">
                     <div class="mb-3">
@@ -202,7 +206,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="col-sm-12 col-md-4">
                     <div class="mb-3">
@@ -213,8 +217,8 @@
 
 
 
-                
-                
+
+
 
                 <div class="col-sm-12 col-md-4">
                     <div class="mb-3">
@@ -230,14 +234,14 @@
 
 
 
-            
+
             <div class="row" id="screnshotappender">
 
 
-               
+
             </div>
 
-                            
+
             <div class="buttonSection w-100 d-flex justify-content-end">
                 <button type="button" class="btn btn-primary w-5" onclick="screnshotSectionAppender()">Add Screnshot</button>
             </div>
@@ -265,7 +269,7 @@
              const secondHtml = `
                 <label for="screenshots" class="form-label">ScreenShot</label>
                 <input type="file" class="form-control" name="screenshots[]" id="screenshots" required>
-  
+
         `
             // document.getElementById("screnshotappender").innerHTML = html;
             let firstDiv = document.createElement("div");
@@ -279,7 +283,7 @@
            const appenderRowSection = document.getElementById("screnshotappender");
            appenderRowSection.appendChild(firstDiv);
            appenderRowSection.appendChild(secondDiv);
-        
+
         }
     </script>
 

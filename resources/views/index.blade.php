@@ -8,10 +8,10 @@
                 <h2>ACTIVE ICO</h2>
             </div>
 
-  
+
 
             @foreach ($active as $active_card)
-                
+
             <a href="{{ route('singleCard', $active_card->id) }}">
                 <div class="card">
                     <div class="upper d-flex">
@@ -28,7 +28,7 @@
                             <div class="money d-flex">
                                 <div class="received">
                                     <span>${{ $active_card->price }} </span>
-                                </div> 
+                                </div>
                                 <div class="total">
                                     <span>/ ${{ $active_card->previous_price }}</span>
                                 </div>
@@ -46,10 +46,10 @@
                             <div class="timeLeft">
 
                                 @php
-                                    $different_days  = \Carbon\Carbon::parse($active_card->sale_start)->diffInDays($active_card->sale_end);
+                                $different_days = \Carbon\Carbon::parse($active_card->sale_start)->diffInDays($active_card->sale_end);
 
                                 @endphp
-                                <span> {{ $different_days }} day left  </span>
+                                <span> {{ $different_days }} day left </span>
                             </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
 
 
             @foreach ($UpComing as $UpComing_card)
-                
+
             <a href="{{ route('singleCard', $UpComing_card->id) }}">
                 <div class="card">
                     <div class="upper d-flex">
@@ -95,7 +95,7 @@
                             <div class="money d-flex">
                                 <div class="received">
                                     <span>${{ $UpComing_card->price }} </span>
-                                </div> 
+                                </div>
                                 <div class="total">
                                     <span>/ ${{ $UpComing_card->previous_price }}</span>
                                 </div>
@@ -113,10 +113,10 @@
                             <div class="timeLeft">
 
                                 @php
-                                    $different_days  = \Carbon\Carbon::parse($UpComing_card->sale_start)->diffInDays($UpComing_card->sale_end);
+                                $different_days = \Carbon\Carbon::parse($UpComing_card->sale_start)->diffInDays($UpComing_card->sale_end);
 
                                 @endphp
-                                <span> {{ $different_days }} day left  </span>
+                                <span> {{ $different_days }} day left </span>
                             </div>
                         </div>
                     </div>
@@ -145,7 +145,7 @@
 
 
             @foreach ($Ended as $Ended_card)
-                
+
             <a href="{{ route('singleCard', $Ended_card->id) }}">
                 <div class="card">
                     <div class="upper d-flex">
@@ -162,7 +162,7 @@
                             <div class="money d-flex">
                                 <div class="received">
                                     <span>${{ $Ended_card->price }} </span>
-                                </div> 
+                                </div>
                                 <div class="total">
                                     <span>/ ${{ $Ended_card->previous_price }}</span>
                                 </div>
@@ -180,10 +180,10 @@
                             <div class="timeLeft">
 
                                 @php
-                                    $different_days  = \Carbon\Carbon::parse($UpComing_card->sale_start)->diffInDays($UpComing_card->sale_end);
+                                $different_days = \Carbon\Carbon::parse($UpComing_card->sale_start)->diffInDays($UpComing_card->sale_end);
 
                                 @endphp
-                                <span> {{ $different_days }} day left  </span>
+                                <span> {{ $different_days }} day left </span>
                             </div>
                         </div>
                     </div>
@@ -192,14 +192,14 @@
 
             @endforeach
 
-        @if(!$Ended->isEmpty())
+            @if(!$Ended->isEmpty())
             <div class="page-redirect-btn">
                 <button>
                     <a href="{{ route('Ended_ico') }}">VIEW ALL Ended ICO</a>
                 </button>
             </div>
 
-        @endif
+            @endif
 
 
         </div>
@@ -214,5 +214,5 @@
 </section>
 
 
-    
+
 @endsection

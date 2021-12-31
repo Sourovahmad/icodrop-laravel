@@ -24,7 +24,8 @@
                     <li><a href="">UPCOMING ICO</a></li>
                     <li><a href="">ENDED ICO</a></li>
                     <li><a href="">BOUNTY LIST (NEW)</a></li>
-                    <li><a href="">SENDBOX (BETA)</a></li>
+                    <li><a href="{{ asset('/sandbox-ico-list') }}">SENDBOX (BETA)</a></li>
+
                     <li><a href="">WHITE LIST (BETA)</a></li>
                 </ul>
             </div>
